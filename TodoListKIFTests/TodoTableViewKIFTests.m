@@ -38,16 +38,34 @@
 
 - (void)testScrollToItem
 {
-    // This test should:
-    // 1. add 14 items to the list
-    // 2. tap on the 17th which is not visible without scrolling
-    // 3. go back to the table view
+    for (int i = 0; i <= 13; ++i)
+    {
+        [tester tapViewWithAccessibilityLabel:@"Add"];
+    }
+
+    UITableView *tableView = (UITableView *)[tester waitForViewWithAccessibilityLabel:@"tableView"];
+    [tester waitForCellAtIndexPath:[NSIndexPath indexPathForRow:12 inSection:0] inTableView:tableView];
+
+    NSInteger numberOfRows = [tableView numberOfRowsInSection:0];
+    XCTAssertEqual(numberOfRows, 18);
+
+    [tester tapViewWithAccessibilityLabel:@"Anything else? 17"];
+
+    // go back
+    [tester tapViewWithAccessibilityLabel:@"Back"];
+    [tester waitForViewWithAccessibilityLabel:@"tableView"];
 }
 
 - (void)testSwipe
 {
-    // This test should:
-    // 1. Delete with swipe the 10th element in the list and see it's not there anymore
+    UITableView *tableView = (UITableView *)[tester waitForViewWithAccessibilityLabel:@"tableView"];
+    [tester swipeRowAtIndexPath:[NSIndexPath indexPathForRow:10 inSection:0]
+                    inTableView:tableView
+                    inDirection:KIFSwipeDirectionLeft];
+    [tester tapViewWithAccessibilityLabel:@"Delete"];
+
+    NSInteger numberOfRows = [tableView numberOfRowsInSection:0];
+    XCTAssertEqual(numberOfRows, 17);
 }
 
 @end

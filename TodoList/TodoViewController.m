@@ -26,6 +26,21 @@
     self.todoLabel.text = _todoItem;
     self.todoLabel.accessibilityLabel = [NSString stringWithFormat:@"Description: %@", _todoItem];
     self.doneButton.accessibilityLabel = @"Done";
+
+    self.alert = [UIAlertController alertControllerWithTitle:@"Are you sure.."
+                                                     message:[NSString stringWithFormat:@"..you are done with %@?", _todoItem]
+                                              preferredStyle:UIAlertControllerStyleAlert];
+    [self.alert addAction:[UIAlertAction actionWithTitle:@"OK"
+                                                   style:UIAlertActionStyleDefault
+                                                 handler:^(UIAlertAction * _Nonnull action)
+                           {
+                               [self.delegate deleteTodoItem:_todoItem];
+                               [self.navigationController popViewControllerAnimated:YES];
+                           }]];
+
+    [self.alert addAction:[UIAlertAction actionWithTitle:@"Cancel"
+                                                   style:UIAlertActionStyleCancel
+                                                 handler:nil]];
 }
 
 - (void)didReceiveMemoryWarning

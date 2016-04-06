@@ -45,7 +45,9 @@
 #pragma mark - Navigation Bar
 - (void)insertNewItem:(id)sender
 {
-    // It should add a new item to the list
+    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:_items.count inSection:0];
+    [self.items addObject:@"Anything else?"];
+    [self.tableView insertRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
 }
 
 #pragma mark - Table view data source
