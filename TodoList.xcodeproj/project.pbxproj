@@ -10,6 +10,7 @@
 		2547E3E5D5F7FCBCB22E740D /* libPods-TodoListKIFTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B9DB642B28652B47DDFD6E11 /* libPods-TodoListKIFTests.a */; };
 		518D9E371CAE9A390031C3E6 /* TodoTableViewKIFTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 518D9E2F1CAE99880031C3E6 /* TodoTableViewKIFTests.m */; };
 		518D9E3C1CAE9B760031C3E6 /* TodoViewKIFTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 518D9E2E1CAE99880031C3E6 /* TodoViewKIFTests.m */; };
+		630C44A01CB50F2500ADC92B /* TodoListUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 630C449F1CB50F2500ADC92B /* TodoListUITests.m */; };
 		639C83461CAD8F780021F7F7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 639C83451CAD8F780021F7F7 /* main.m */; };
 		639C83491CAD8F780021F7F7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 639C83481CAD8F780021F7F7 /* AppDelegate.m */; };
 		639C83511CAD8F780021F7F7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 639C83501CAD8F780021F7F7 /* Assets.xcassets */; };
@@ -20,6 +21,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		630C44A21CB50F2500ADC92B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 639C83391CAD8F780021F7F7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 639C83401CAD8F780021F7F7;
+			remoteInfo = TodoList;
+		};
 		63F497481CADBAE400A8430E /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 639C83391CAD8F780021F7F7 /* Project object */;
@@ -35,6 +43,9 @@
 		518D9E2F1CAE99880031C3E6 /* TodoTableViewKIFTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TodoTableViewKIFTests.m; path = TodoListKIFTests/TodoTableViewKIFTests.m; sourceTree = SOURCE_ROOT; };
 		518D9E301CAE99880031C3E6 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = TodoListKIFTests/Info.plist; sourceTree = SOURCE_ROOT; };
 		518D9E391CAE9A8F0031C3E6 /* libPods-TodoListKIFTests.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libPods-TodoListKIFTests.a"; path = "Pods/../build/Debug-iphoneos/libPods-TodoListKIFTests.a"; sourceTree = "<group>"; };
+		630C449D1CB50F2500ADC92B /* TodoListUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TodoListUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		630C449F1CB50F2500ADC92B /* TodoListUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TodoListUITests.m; sourceTree = "<group>"; };
+		630C44A11CB50F2500ADC92B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		639C83411CAD8F780021F7F7 /* TodoList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TodoList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		639C83451CAD8F780021F7F7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		639C83471CAD8F780021F7F7 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -54,6 +65,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		630C449A1CB50F2500ADC92B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		639C833E1CAD8F780021F7F7 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -72,11 +90,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		630C449E1CB50F2500ADC92B /* TodoListUITests */ = {
+			isa = PBXGroup;
+			children = (
+				630C449F1CB50F2500ADC92B /* TodoListUITests.m */,
+				630C44A11CB50F2500ADC92B /* Info.plist */,
+			);
+			path = TodoListUITests;
+			sourceTree = "<group>";
+		};
 		639C83381CAD8F780021F7F7 = {
 			isa = PBXGroup;
 			children = (
 				639C83431CAD8F780021F7F7 /* TodoList */,
 				63F497441CADBAE400A8430E /* TodoListKIFTests */,
+				630C449E1CB50F2500ADC92B /* TodoListUITests */,
 				639C83421CAD8F780021F7F7 /* Products */,
 				BD3129E57A26C3962404EAA7 /* Frameworks */,
 				7B62C5A751023A8B764440E8 /* Pods */,
@@ -88,6 +116,7 @@
 			children = (
 				639C83411CAD8F780021F7F7 /* TodoList.app */,
 				63F497431CADBAE400A8430E /* TodoListKIFTests.xctest */,
+				630C449D1CB50F2500ADC92B /* TodoListUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -151,6 +180,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		630C449C1CB50F2500ADC92B /* TodoListUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 630C44A61CB50F2500ADC92B /* Build configuration list for PBXNativeTarget "TodoListUITests" */;
+			buildPhases = (
+				630C44991CB50F2500ADC92B /* Sources */,
+				630C449A1CB50F2500ADC92B /* Frameworks */,
+				630C449B1CB50F2500ADC92B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				630C44A31CB50F2500ADC92B /* PBXTargetDependency */,
+			);
+			name = TodoListUITests;
+			productName = TodoListUITests;
+			productReference = 630C449D1CB50F2500ADC92B /* TodoListUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 		639C83401CAD8F780021F7F7 /* TodoList */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 639C83631CAD8F780021F7F7 /* Build configuration list for PBXNativeTarget "TodoList" */;
@@ -198,6 +245,10 @@
 				LastUpgradeCheck = 0730;
 				ORGANIZATIONNAME = "Supercharge Kft";
 				TargetAttributes = {
+					630C449C1CB50F2500ADC92B = {
+						CreatedOnToolsVersion = 7.3;
+						TestTargetID = 639C83401CAD8F780021F7F7;
+					};
 					639C83401CAD8F780021F7F7 = {
 						CreatedOnToolsVersion = 7.3;
 					};
@@ -222,11 +273,19 @@
 			targets = (
 				639C83401CAD8F780021F7F7 /* TodoList */,
 				63F497421CADBAE400A8430E /* TodoListKIFTests */,
+				630C449C1CB50F2500ADC92B /* TodoListUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		630C449B1CB50F2500ADC92B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		639C833F1CAD8F780021F7F7 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -295,6 +354,14 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		630C44991CB50F2500ADC92B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				630C44A01CB50F2500ADC92B /* TodoListUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		639C833D1CAD8F780021F7F7 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -318,6 +385,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		630C44A31CB50F2500ADC92B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 639C83401CAD8F780021F7F7 /* TodoList */;
+			targetProxy = 630C44A21CB50F2500ADC92B /* PBXContainerItemProxy */;
+		};
 		63F497491CADBAE400A8430E /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 639C83401CAD8F780021F7F7 /* TodoList */;
@@ -345,6 +417,30 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		630C44A41CB50F2500ADC92B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = TodoListUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.supercharge.TodoListUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = TodoList;
+			};
+			name = Debug;
+		};
+		630C44A51CB50F2500ADC92B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = TodoListUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.supercharge.TodoListUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = TodoList;
+			};
+			name = Release;
+		};
 		639C83611CAD8F780021F7F7 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -482,6 +578,14 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		630C44A61CB50F2500ADC92B /* Build configuration list for PBXNativeTarget "TodoListUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				630C44A41CB50F2500ADC92B /* Debug */,
+				630C44A51CB50F2500ADC92B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		639C833C1CAD8F780021F7F7 /* Build configuration list for PBXProject "TodoList" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
